@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-04-21 Mon 18:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Mate Szilak" />
+<meta name="generator" content="Org Mode" />
+<style>
+a:link {color:#9cf}
+a:visited {color:#c9f}
+a:hover, a:visited:hover {color:#f00}
+blockquote {padding-left: 1em;border-left: 3px solid #fff}
+pre,code {overflow: auto;background:#555}
+pre {border: 1px solid #069}
+h1,h2,h3,h4,h5,h6 {line-height:1;text-decoration:underline}
+#nav li {list-style: none}
+img {max-width: 100%}
+.right {float: right}
+
+body{
+    color:#fff;
+    background:#000;
+    margin:1em auto;
+    max-width:60em;
+    padding:0 .62em;
+    font: sans-serif;
+    overflow-wrap: break-word;
+}
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="outline-container-org37dc01b" class="outline-2">
+<h2 id="org37dc01b"><span class="section-number-2"></span>Instagram Private Profile Deanonymization</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Since this behavior was closed as intended functionality half a year ago, I'll share it publicly to aid possible OSINT investigations / stalkers in the future :D
+</p>
+
+<p>
+Summary: <i>If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.</i>
+</p>
+
+<p>
+By opening <a href="https://www.instagram.com/szh4ck3r/">https://www.instagram.com/szh4ck3r/</a> (unauthenticated) the browser will make a request to <a href="https://www.instagram.com/api/v1/users/web_profile_info/?username=szh4ck3r">https://www.instagram.com/api/v1/users/web_profile_info/?username=szh4ck3r</a> (old instagram API) which would list the user's <b>collaboration posts with public profiles</b>.
+</p>
+
+
+<div id="org9e9a7ad" class="figure">
+<p><img src="img/Screenshot 2025-04-21 at 17.24.11.png" alt="Screenshot 2025-04-21 at 17.24.11.png" />
+</p>
+</div>
+
+<p>
+<code>"coauthor_producers":[...]</code> contain coauthor usernames of a post, which could be used for further investigations.
+</p>
+
+
+<div id="orgccdf203" class="figure">
+<p><img src="img/Screenshot 2025-04-21 at 17.53.59.png" alt="Screenshot 2025-04-21 at 17.53.59.png" />
+</p>
+</div>
+
+<p>
+Since one of the coauthors is always a public profile (by using this behavior) it's now time to get the follow{er,ing} list to expand possible connection list once again.
+</p>
+
+<p>
+To dump shared pictures of a private profile just use a simple <code>grep -o display_url":"[^"]*</code> to get all post URLs and a <code>| sed 's/\\u00/\%/g'</code> to get rid of Unicode URL encoding then download/open the clean URLs.
+</p>
+
+
+<div id="org22fa8bb" class="figure">
+<p><img src="img/Screenshot 2025-04-21 at 17.47.55.png" alt="Screenshot 2025-04-21 at 17.47.55.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mate Szilak</p>
+<p class="date">Created: 2025-04-21 Mon 18:14</p>
+</div>
+</body>
+</html>
