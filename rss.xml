@@ -4,14 +4,14 @@
 <title><![CDATA[szilak.com]]></title>
 <description><![CDATA[szilak.com]]></description>
 <link>https://szilak.com/</link>
-<lastBuildDate>Thu, 24 Apr 2025 00:54:47 +0200</lastBuildDate>
+<lastBuildDate>Thu, 24 Apr 2025 01:54:05 +0200</lastBuildDate>
 <item>
   <title><![CDATA[Instagram private profile deanonymization]]></title>
   <description><![CDATA[
 <div class="taglist">:<a href="https://szilak.com/tag-osint.html">osint</a>:</div></div><div class="post-date"><2025-04-24></div>
-<div id="outline-container-org509e2eb" class="outline-2">
-<h2 id="org509e2eb">The intended functionality :D</h2>
-<div class="outline-text-2" id="text-org509e2eb">
+<div id="outline-container-org3c5ee2f" class="outline-2">
+<h2 id="org3c5ee2f">The intended functionality :D</h2>
+<div class="outline-text-2" id="text-org3c5ee2f">
 <p>
 Since this behavior was closed as intended functionality half a year ago, I'll share it publicly to aid possible OSINT investigations / stalkers in the future :D
 </p>
@@ -25,7 +25,7 @@ By opening <a href="https://www.instagram.com/szh4ck3r/">https://www.instagram.c
 </p>
 
 
-<figure id="org7610e52">
+<figure id="orgcfaaa19">
 <img src="file:///Users/m/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/Notes/blog/posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.24.11.png" alt="Screenshot 2025-04-21 at 17.24.11.png">
 
 </figure>
@@ -35,7 +35,7 @@ By opening <a href="https://www.instagram.com/szh4ck3r/">https://www.instagram.c
 </p>
 
 
-<figure id="orgc808144">
+<figure id="orgd9fd49e">
 <img src="file:///Users/m/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/Notes/blog/posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.53.59.png" alt="Screenshot 2025-04-21 at 17.53.59.png">
 
 </figure>
@@ -49,7 +49,7 @@ To dump shared pictures of a private profile just use a simple <code>grep -o dis
 </p>
 
 
-<figure id="org77847de">
+<figure id="org03d9a0f">
 <img src="file:///Users/m/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/Notes/blog/posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.47.55.png" alt="Screenshot 2025-04-21 at 17.47.55.png">
 
 </figure>
