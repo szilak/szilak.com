@@ -1,0 +1,43 @@
+#+title: Locked iPhone Arbitrary Number Call
+#+date: <2025-09-18 13:17>
+#+description: Phone Numbers not saved in the contact list can be called from a locked iPhone (after first unlock) by using Spotlight Search.
+#+filetags: apple iphone privacy
+
+* Summary                                                            :ATTACH:
+/Phone Numbers *not saved in the contact list* can be called from a locked iPhone (after first unlock) by using Spotlight Search./
+
+PoC: https://youtube.com/shorts/011jq9SN6MA
+
+* Prerequisites
+Physical access to a locked iPhone with default configuration after first unlock (incl. Lockdown Mode (https://support.apple.com/en-us/105120)).
+
+* Steps to Reproduce
+1. Use Spotlight Search to search for a Phone Number (with proper country codes e.g., +36 for Hungary).
+2. Tap on the number label itself (not the phone icon) to call arbitrary phone numbers that are **not saved in the contact list**.
+
+* Exploitation                                                       :ATTACH:
+:PROPERTIES:
+:ID:       63D0D505-B89C-40D2-81F7-2DC6B1FCE9FC
+:END:
+Tapping the *Phone Number text label itself* shown in Spotlight Search results calls the Entered Phone Number. It is also possible to call Premium-Rate Phone Numbers (/Phone thievery comeback is real lol💀🥀/). 
+
+Enter any unsaved Phone Number:
+
+[[attachment:IMG_3739.PNG]]
+
+And click on the Phone Number text itself to start calling:
+
+[[attachment:Screenshot 2025-09-20 at 11.11.24.png]]
+
+[[attachment:Screenshot 2025-09-20 at 11.04.04.png]]
+
+Possible Remediation: As used in the Email sending feature, *Calling should also require the user to unlock the device* except when calling an emergency number.
+
+* Response                                                           :ATTACH:
+:PROPERTIES:
+:ID:       E3425D15-1EBB-46CB-AC4C-7588E03826FC
+:END:
+[[attachment:Screenshot 2025-09-18 at 13.24.44.png]]
+
+- Haha it's just intentional behavior if u want /securti✨/ just disable the function and get fkd retard
+

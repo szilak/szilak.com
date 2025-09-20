@@ -1,0 +1,16 @@
+#+title: Locked iPhone Contact Brute Force
+#+date: <2025-09-18 12:28>
+#+description: Contact information could be leaked from a locked iPhone (after first unlock) by using spotlight search.
+#+filetags: apple iphone privacy
+
+* Summary
+/Contact information could be leaked from a locked iPhone (after first unlock) by using spotlight search./
+
+* Prerequisites
+A locked iPhone with default configuration after first unlock or locked iPhone with default configuration in Lockdown Mode after first unlock.
+
+* Steps to Reproduce
+1. Use spotlight search to search for a Phone Number (with proper country coding e.g., +36 for Hungary)/Email Address.
+2. If the Phone Number/Email Address is in the Contact List, there will be *no* option to Call/Email them (only search in safari shows up).
+
+With this behavior it is possible to brute force Phone Numbers/Email Addresses saved in the contact list of the *locked* iPhone by using a "negative lookup". Please also note that, this behavior could also be replicated in iPhone Lockdown Mode (https://support.apple.com/en-us/105120).

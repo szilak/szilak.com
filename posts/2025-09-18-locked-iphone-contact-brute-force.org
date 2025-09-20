@@ -1,0 +1,53 @@
+#+title: Locked iPhone Saved Contact Confirmation
+#+date: <2025-09-18 12:28>
+#+description: It is possible to confirm whether a Phone Number/Email is saved in an locked iPhone (after first unlock) by using Spotlight Search.
+#+filetags: apple iphone privacy
+
+* Summary                                                            :ATTACH:
+/It is possible to *confirm whether a Phone Number/Email is saved in an locked iPhone* (after first unlock) by using Spotlight Search./
+
+PoC: https://youtube.com/shorts/011jq9SN6MA
+
+* Prerequisites
+Physical access to a locked iPhone with default configuration after first unlock (incl. Lockdown Mode (https://support.apple.com/en-us/105120)).
+
+* Steps to Reproduce
+1. Use Spotlight Search to search for a Phone Number (with proper country coding e.g., +36 for Hungary)/Email Address.
+2. If the Phone Number/Email Address is in the Contact List, there will be *no* option to Call/Email them (only search in safari shows up).
+
+* Exploitation                                                       :ATTACH:
+:PROPERTIES:
+:ID:       B0B2A2E6-5D01-4A79-9030-46F7B93AC3D1
+:END:
+Saved Contact Info (Phone Number ending in ~37~, Email ending in ~02@gmail.com~):
+
+[[attachment:IMG_3734.PNG]]
+
+Only Safari Search shows up when a Saved Contact is hit:
+
+[[attachment:IMG_3735.PNG]]
+
+Add Email shows up when an Unsaved Contact is hit:
+
+[[attachment:IMG_3736.PNG]]
+
+It's the same with Phone Numbers...
+
+Phone Number is SAVED IN Contact List:
+
+[[attachment:IMG_3737.PNG]]
+
+Phone Number is NOT saved in Contact List:
+
+[[attachment:IMG_3738.PNG]]
+
+Possible Remediation: Only show Add Number/Email option *after* unlocking the device to avoid Contact Information Disclosure.
+
+* Response                                                           :ATTACH:
+:PROPERTIES:
+:ID:       FDF379EA-D51D-4C34-A704-440B569D19DC
+:END:
+[[attachment:Screenshot 2025-09-18 at 12.54.31.png]]
+
+- Haha it's just intentional behavior if u want /securti✨/ just disable the function and get fkd retard
+

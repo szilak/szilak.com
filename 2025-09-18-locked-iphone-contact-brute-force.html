@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="It is possible to confirm whether a Phone Number/Email is saved in an locked iPhone (after first unlock) by using Spotlight Search.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://szilak.com/rss.xml"
+      title="RSS feed for https://szilak.com/">
+<title>Locked iPhone Saved Contact Confirmation</title>
+<meta name="author" content="Mate Szilak">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link href= "static/style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="static/favicon.ico"></head>
+<body>
+<div id="preamble" class="status"><div class="header">
+  <a href="https://szilak.com">szilak.com</a>
+</div></div>
+<div id="content">
+<div class="headline"> <h1 class="post-title"><a href="2025-09-18-locked-iphone-contact-brute-force.html">Locked iPhone Saved Contact Confirmation</a></h1>
+<div class="taglist">:<a href="https://szilak.com/tag-apple.html">apple</a>:<a href="https://szilak.com/tag-iphone.html">iphone</a>:<a href="https://szilak.com/tag-privacy.html">privacy</a>:</div></div><div class="post-date"><2025-09-18></div>
+<div id="outline-container-org5e25d75" class="outline-2">
+<h2 id="org5e25d75">Summary&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org5e25d75">
+<p>
+<i>It is possible to <b>confirm whether a Phone Number/Email is saved in an locked iPhone</b> (after first unlock) by using Spotlight Search.</i>
+</p>
+
+<p>
+PoC: <a href="https://youtube.com/shorts/011jq9SN6MA">https://youtube.com/shorts/011jq9SN6MA</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48eb426" class="outline-2">
+<h2 id="org48eb426">Prerequisites</h2>
+<div class="outline-text-2" id="text-org48eb426">
+<p>
+Physical access to a locked iPhone with default configuration after first unlock (incl. Lockdown Mode (<a href="https://support.apple.com/en-us/105120">https://support.apple.com/en-us/105120</a>)).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org487f995" class="outline-2">
+<h2 id="org487f995">Steps to Reproduce</h2>
+<div class="outline-text-2" id="text-org487f995">
+<ol class="org-ol">
+<li>Use Spotlight Search to search for a Phone Number (with proper country coding e.g., +36 for Hungary)/Email Address.</li>
+<li>If the Phone Number/Email Address is in the Contact List, there will be <b>no</b> option to Call/Email them (only search in safari shows up).</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1b42269" class="outline-2">
+<h2 id="org1b42269">Exploitation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org1b42269">
+<p>
+Saved Contact Info (Phone Number ending in <code>37</code>, Email ending in <code>02@gmail.com</code>):
+</p>
+
+
+<figure id="orgffde269">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3734.PNG" alt="IMG_3734.PNG">
+
+</figure>
+
+<p>
+Only Safari Search shows up when a Saved Contact is hit:
+</p>
+
+
+<figure id="org19cf62d">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3735.PNG" alt="IMG_3735.PNG">
+
+</figure>
+
+<p>
+Add Email shows up when an Unsaved Contact is hit:
+</p>
+
+
+<figure id="orga143dc3">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3736.PNG" alt="IMG_3736.PNG">
+
+</figure>
+
+<p>
+It's the same with Phone Numbers&#x2026;
+</p>
+
+<p>
+Phone Number is SAVED IN Contact List:
+</p>
+
+
+<figure id="org90401f0">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3737.PNG" alt="IMG_3737.PNG">
+
+</figure>
+
+<p>
+Phone Number is NOT saved in Contact List:
+</p>
+
+
+<figure id="org79cffc1">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3738.PNG" alt="IMG_3738.PNG">
+
+</figure>
+
+<p>
+Possible Remediation: Only show Add Number/Email option <b>after</b> unlocking the device to avoid Contact Information Disclosure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a6ac9b" class="outline-2">
+<h2 id="org5a6ac9b">Response&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org5a6ac9b">
+
+<figure id="org4e1b1f1">
+<img src="posts/data/FD/F379EA-D51D-4C34-A704-440B569D19DC/Screenshot 2025-09-18 at 12.54.31.png" alt="Screenshot 2025-09-18 at 12.54.31.png">
+
+</figure>
+
+<ul class="org-ul">
+<li>Haha it's just intentional behavior if u want <i>securti✨</i> just disable the function and get fkd retard</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status"><center><a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">szilak.com</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://szilak.com" property="cc:attributionName" rel="cc:attributionURL">Mate Szilak</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center></div>
+</body>
+</html>

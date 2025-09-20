@@ -1,0 +1,54 @@
+#+title: instagram-osint
+#+date: <2025-09-18 09:29>
+#+description: If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.
+#+filetags: osint:instagram
+
+* Overview
+Had a private profile and a collab post with one of my broz who had a public profile.
+
+* AuthN-ed but not following                                         :ATTACH:
+:PROPERTIES:
+:ID:       512149EC-5B7E-4C82-9DA8-046428E7BD6A
+:END:
+GQL api get feed:
+[[attachment:Screenshot 2025-05-21 at 18.40.22.png]]
+- Literally nothing lmao
+
+* AuthN-ed and following                                             :ATTACH:
+:PROPERTIES:
+:ID:       A466BE30-0ABE-4756-ACC6-388005F66DE9
+:END:
+[[attachment:Screenshot 2025-05-21 at 18.44.46.png]]
+- Obv. listed
+
+* AuthN-ed history of reqs                                           :ATTACH:
+:PROPERTIES:
+:ID:       6FD78490-A2D3-49B6-AA4C-465A0C28E52D
+:END:
+
+[[attachment:Screenshot 2025-05-21 at 18.45.53.png]]
+
+* UnauthN-ed                                                         :ATTACH:
+:PROPERTIES:
+:ID:       75AD6165-41D5-446B-BB04-B057449CB540
+:END:
+[[attachment:Screenshot 2025-05-21 at 18.47.48.png]]
+- Ohshi w(hy)tf
+
+* For tha Xtra lulz -- AuthN-ed direct APIreq
+:PROPERTIES:
+:ID:       E15F4553-147B-4F6C-97BE-15B9EEB72C7A
+:END:
+[[attachment:Screenshot 2025-05-21 at 18.57.02.png]]
+- no ~szh4ck"~
+  - aka /Unauth is the new auth/
+
+* Summary
+/If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation./
+
+* Response
+:PROPERTIES:
+:ID:       75F2C68B-ABCA-44EA-83E1-58EED578E22F
+:END:
+[[attachment:Screenshot 2025-05-20 at 20.12.13.png]]
+- Haha it's just intentional behavior get fkd retard

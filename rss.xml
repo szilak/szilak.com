@@ -4,20 +4,234 @@
 <title><![CDATA[szilak.com]]></title>
 <description><![CDATA[szilak.com]]></description>
 <link>https://szilak.com/</link>
-<lastBuildDate>Thu, 24 Apr 2025 01:54:05 +0200</lastBuildDate>
+<lastBuildDate>Sat, 20 Sep 2025 11:46:25 +0200</lastBuildDate>
 <item>
-  <title><![CDATA[Instagram private profile deanonymization]]></title>
+  <title><![CDATA[Locked iPhone Arbitrary Number Call]]></title>
   <description><![CDATA[
-<div class="taglist">:<a href="https://szilak.com/tag-osint.html">osint</a>:</div></div><div class="post-date"><2025-04-24></div>
-<div id="outline-container-org3c5ee2f" class="outline-2">
-<h2 id="org3c5ee2f">The intended functionality :D</h2>
-<div class="outline-text-2" id="text-org3c5ee2f">
+<div class="taglist">:<a href="https://szilak.com/tag-apple.html">apple</a>:<a href="https://szilak.com/tag-iphone.html">iphone</a>:<a href="https://szilak.com/tag-privacy.html">privacy</a>:</div></div><div class="post-date"><2025-09-18></div>
+<div id="outline-container-orgfaffd9e" class="outline-2">
+<h2 id="orgfaffd9e">Summary&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-orgfaffd9e">
 <p>
-Since this behavior was closed as intended functionality half a year ago, I'll share it publicly to aid possible OSINT investigations / stalkers in the future :D
+<i>Phone Numbers <b>not saved in the contact list</b> can be called from a locked iPhone (after first unlock) by using Spotlight Search.</i>
 </p>
 
 <p>
-Summary: <i>If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.</i>
+PoC: <a href="https://youtube.com/shorts/011jq9SN6MA">https://youtube.com/shorts/011jq9SN6MA</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga0e599c" class="outline-2">
+<h2 id="orga0e599c">Prerequisites</h2>
+<div class="outline-text-2" id="text-orga0e599c">
+<p>
+Physical access to a locked iPhone with default configuration after first unlock (incl. Lockdown Mode (<a href="https://support.apple.com/en-us/105120">https://support.apple.com/en-us/105120</a>)).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org350edf8" class="outline-2">
+<h2 id="org350edf8">Steps to Reproduce</h2>
+<div class="outline-text-2" id="text-org350edf8">
+<ol class="org-ol">
+<li>Use Spotlight Search to search for a Phone Number (with proper country codes e.g., +36 for Hungary).</li>
+<li>Tap on the number label itself (not the phone icon) to call arbitrary phone numbers that are <b><b>not saved in the contact list</b></b>.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org58f4359" class="outline-2">
+<h2 id="org58f4359">Exploitation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org58f4359">
+<p>
+Tapping the <b>Phone Number text label itself</b> shown in Spotlight Search results calls the Entered Phone Number. It is also possible to call Premium-Rate Phone Numbers (<i>Phone thievery comeback is real lol💀🥀</i>). 
+</p>
+
+<p>
+Enter any unsaved Phone Number:
+</p>
+
+
+<figure id="org282c7e2">
+<img src="posts/data/63/D0D505-B89C-40D2-81F7-2DC6B1FCE9FC/IMG_3739.PNG" alt="IMG_3739.PNG">
+
+</figure>
+
+<p>
+And click on the Phone Number text itself to start calling:
+</p>
+
+
+<figure id="org763af46">
+<img src="posts/data/63/D0D505-B89C-40D2-81F7-2DC6B1FCE9FC/Screenshot 2025-09-20 at 11.11.24.png" alt="Screenshot 2025-09-20 at 11.11.24.png">
+
+</figure>
+
+
+<figure id="org54cc800">
+<img src="posts/data/63/D0D505-B89C-40D2-81F7-2DC6B1FCE9FC/Screenshot 2025-09-20 at 11.04.04.png" alt="Screenshot 2025-09-20 at 11.04.04.png">
+
+</figure>
+
+<p>
+Possible Remediation: As used in the Email sending feature, <b>Calling should also require the user to unlock the device</b> except when calling an emergency number.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c4c9ba" class="outline-2">
+<h2 id="org3c4c9ba">Response&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org3c4c9ba">
+
+<figure id="org1c89ee0">
+<img src="posts/data/E3/425D15-1EBB-46CB-AC4C-7588E03826FC/Screenshot 2025-09-18 at 13.24.44.png" alt="Screenshot 2025-09-18 at 13.24.44.png">
+
+</figure>
+
+<ul class="org-ul">
+<li>Haha it's just intentional behavior if u want <i>securti✨</i> just disable the function and get fkd retard</li>
+</ul>
+</div>
+</div>
+]]></description>
+  <category><![CDATA[apple]]></category>
+  <category><![CDATA[iphone]]></category>
+  <category><![CDATA[privacy]]></category>
+  <link>https://szilak.com/2025-09-18-locked-iphone-arbitrary-number-call.html</link>
+  <guid>https://szilak.com/2025-09-18-locked-iphone-arbitrary-number-call.html</guid>
+  <pubDate>Thu, 18 Sep 2025 13:17:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Locked iPhone Saved Contact Confirmation]]></title>
+  <description><![CDATA[
+<div class="taglist">:<a href="https://szilak.com/tag-apple.html">apple</a>:<a href="https://szilak.com/tag-iphone.html">iphone</a>:<a href="https://szilak.com/tag-privacy.html">privacy</a>:</div></div><div class="post-date"><2025-09-18></div>
+<div id="outline-container-org5e25d75" class="outline-2">
+<h2 id="org5e25d75">Summary&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org5e25d75">
+<p>
+<i>It is possible to <b>confirm whether a Phone Number/Email is saved in an locked iPhone</b> (after first unlock) by using Spotlight Search.</i>
+</p>
+
+<p>
+PoC: <a href="https://youtube.com/shorts/011jq9SN6MA">https://youtube.com/shorts/011jq9SN6MA</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48eb426" class="outline-2">
+<h2 id="org48eb426">Prerequisites</h2>
+<div class="outline-text-2" id="text-org48eb426">
+<p>
+Physical access to a locked iPhone with default configuration after first unlock (incl. Lockdown Mode (<a href="https://support.apple.com/en-us/105120">https://support.apple.com/en-us/105120</a>)).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org487f995" class="outline-2">
+<h2 id="org487f995">Steps to Reproduce</h2>
+<div class="outline-text-2" id="text-org487f995">
+<ol class="org-ol">
+<li>Use Spotlight Search to search for a Phone Number (with proper country coding e.g., +36 for Hungary)/Email Address.</li>
+<li>If the Phone Number/Email Address is in the Contact List, there will be <b>no</b> option to Call/Email them (only search in safari shows up).</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1b42269" class="outline-2">
+<h2 id="org1b42269">Exploitation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org1b42269">
+<p>
+Saved Contact Info (Phone Number ending in <code>37</code>, Email ending in <code>02@gmail.com</code>):
+</p>
+
+
+<figure id="orgffde269">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3734.PNG" alt="IMG_3734.PNG">
+
+</figure>
+
+<p>
+Only Safari Search shows up when a Saved Contact is hit:
+</p>
+
+
+<figure id="org19cf62d">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3735.PNG" alt="IMG_3735.PNG">
+
+</figure>
+
+<p>
+Add Email shows up when an Unsaved Contact is hit:
+</p>
+
+
+<figure id="orga143dc3">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3736.PNG" alt="IMG_3736.PNG">
+
+</figure>
+
+<p>
+It's the same with Phone Numbers&#x2026;
+</p>
+
+<p>
+Phone Number is SAVED IN Contact List:
+</p>
+
+
+<figure id="org90401f0">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3737.PNG" alt="IMG_3737.PNG">
+
+</figure>
+
+<p>
+Phone Number is NOT saved in Contact List:
+</p>
+
+
+<figure id="org79cffc1">
+<img src="posts/data/B0/B2A2E6-5D01-4A79-9030-46F7B93AC3D1/IMG_3738.PNG" alt="IMG_3738.PNG">
+
+</figure>
+
+<p>
+Possible Remediation: Only show Add Number/Email option <b>after</b> unlocking the device to avoid Contact Information Disclosure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a6ac9b" class="outline-2">
+<h2 id="org5a6ac9b">Response&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org5a6ac9b">
+
+<figure id="org4e1b1f1">
+<img src="posts/data/FD/F379EA-D51D-4C34-A704-440B569D19DC/Screenshot 2025-09-18 at 12.54.31.png" alt="Screenshot 2025-09-18 at 12.54.31.png">
+
+</figure>
+
+<ul class="org-ul">
+<li>Haha it's just intentional behavior if u want <i>securti✨</i> just disable the function and get fkd retard</li>
+</ul>
+</div>
+</div>
+]]></description>
+  <category><![CDATA[apple]]></category>
+  <category><![CDATA[iphone]]></category>
+  <category><![CDATA[privacy]]></category>
+  <link>https://szilak.com/2025-09-18-locked-iphone-contact-brute-force.html</link>
+  <guid>https://szilak.com/2025-09-18-locked-iphone-contact-brute-force.html</guid>
+  <pubDate>Thu, 18 Sep 2025 12:28:00 +0200</pubDate>
+</item>
+<item>
+  <title><![CDATA[Instagram Private Profile Deanonymization]]></title>
+  <description><![CDATA[
+<div class="taglist">:<a href="https://szilak.com/tag-osint.html">osint</a>:<a href="https://szilak.com/tag-instagram.html">instagram</a>:<a href="https://szilak.com/tag-privacy.html">privacy</a>:</div></div><div class="post-date"><2025-09-18></div>
+<div id="outline-container-org0f26de0" class="outline-2">
+<h2 id="org0f26de0">Summary&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org0f26de0">
+<p>
+<i>If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.</i>
 </p>
 
 <p>
@@ -25,41 +239,108 @@ By opening <a href="https://www.instagram.com/szh4ck3r/">https://www.instagram.c
 </p>
 
 
-<figure id="orgcfaaa19">
-<img src="file:///Users/m/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/Notes/blog/posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.24.11.png" alt="Screenshot 2025-04-21 at 17.24.11.png">
+<figure id="org1552c75">
+<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.24.11.png" alt="Screenshot 2025-04-21 at 17.24.11.png">
 
 </figure>
 
-<p>
-<code>"coauthor_producers":[...]</code> contain coauthor usernames of a post, which could be used for further investigations.
-</p>
 
-
-<figure id="orgd9fd49e">
-<img src="file:///Users/m/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/Notes/blog/posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.53.59.png" alt="Screenshot 2025-04-21 at 17.53.59.png">
+<figure id="org94efa37">
+<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.53.59.png" alt="Screenshot 2025-04-21 at 17.53.59.png">
 
 </figure>
+</div>
+</div>
 
+<div id="outline-container-org80b4b79" class="outline-2">
+<h2 id="org80b4b79">AuthN-ed but not following&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org80b4b79">
 <p>
-Since one of the coauthors is always a public profile (by using this behavior) it's now time to get the follow{er,ing} list to expand possible connection list once again.
+GQL api get feed:
+<img src="posts/data/51/2149EC-5B7E-4C82-9DA8-046428E7BD6A/Screenshot 2025-05-21 at 18.40.22.png" alt="Screenshot 2025-05-21 at 18.40.22.png">
 </p>
+<ul class="org-ul">
+<li>Literally nothing lmao</li>
+</ul>
+</div>
+</div>
 
-<p>
-To dump shared pictures of a private profile just use a simple <code>grep -o display_url":"[^"]*</code> to get all post URLs and a <code>| sed 's/\\u00/\%/g'</code> to get rid of Unicode URL encoding then download/open the clean URLs.
-</p>
+<div id="outline-container-org4309a61" class="outline-2">
+<h2 id="org4309a61">AuthN-ed and following&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org4309a61">
 
-
-<figure id="org03d9a0f">
-<img src="file:///Users/m/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/Notes/blog/posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.47.55.png" alt="Screenshot 2025-04-21 at 17.47.55.png">
+<figure id="org049dc91">
+<img src="posts/data/A4/66BE30-0ABE-4756-ACC6-388005F66DE9/Screenshot 2025-05-21 at 18.44.46.png" alt="Screenshot 2025-05-21 at 18.44.46.png">
 
 </figure>
+<ul class="org-ul">
+<li>Obv. listed</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3872d3c" class="outline-2">
+<h2 id="org3872d3c">AuthN-ed history of reqs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org3872d3c">
+
+<figure id="org0cd49e3">
+<img src="posts/data/6F/D78490-A2D3-49B6-AA4C-465A0C28E52D/Screenshot 2025-05-21 at 18.45.53.png" alt="Screenshot 2025-05-21 at 18.45.53.png">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-orgba1388b" class="outline-2">
+<h2 id="orgba1388b">UnauthN-ed&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-orgba1388b">
+
+<figure id="orgc96d29e">
+<img src="posts/data/75/AD6165-41D5-446B-BB04-B057449CB540/Screenshot 2025-05-21 at 18.47.48.png" alt="Screenshot 2025-05-21 at 18.47.48.png">
+
+</figure>
+<ul class="org-ul">
+<li>Ohshi w(hy)tf</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1e694e6" class="outline-2">
+<h2 id="org1e694e6">For tha Xtra lulz &#x2013; AuthN-ed direct APIreq&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org1e694e6">
+
+<figure id="org3102d36">
+<img src="posts/data/E1/5F4553-147B-4F6C-97BE-15B9EEB72C7A/Screenshot 2025-05-21 at 18.57.02.png" alt="Screenshot 2025-05-21 at 18.57.02.png">
+
+</figure>
+<ul class="org-ul">
+<li>no <code>szh4ck"</code>
+<ul class="org-ul">
+<li>aka <i>Unauth is the new auth</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org035e425" class="outline-2">
+<h2 id="org035e425">Response&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org035e425">
+
+<figure id="org8be5112">
+<img src="posts/data/75/F2C68B-ABCA-44EA-83E1-58EED578E22F/Screenshot 2025-05-20 at 20.12.13.png" alt="Screenshot 2025-05-20 at 20.12.13.png">
+
+</figure>
+<ul class="org-ul">
+<li>Haha it's just intentional behavior get fkd retard</li>
+</ul>
 </div>
 </div>
 ]]></description>
   <category><![CDATA[osint]]></category>
-  <link>https://szilak.com/2025-04-24-instagram-osint.html</link>
-  <guid>https://szilak.com/2025-04-24-instagram-osint.html</guid>
-  <pubDate>Thu, 24 Apr 2025 00:12:00 +0200</pubDate>
+  <category><![CDATA[instagram]]></category>
+  <category><![CDATA[privacy]]></category>
+  <link>https://szilak.com/2025-09-18-instagram-osint.html</link>
+  <guid>https://szilak.com/2025-09-18-instagram-osint.html</guid>
+  <pubDate>Thu, 18 Sep 2025 09:29:00 +0200</pubDate>
 </item>
 </channel>
 </rss>

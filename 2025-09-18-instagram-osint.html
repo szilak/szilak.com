@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://szilak.com/rss.xml"
+      title="RSS feed for https://szilak.com/">
+<title>Instagram Private Profile Deanonymization</title>
+<meta name="author" content="Mate Szilak">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link href= "static/style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="static/favicon.ico"></head>
+<body>
+<div id="preamble" class="status"><div class="header">
+  <a href="https://szilak.com">szilak.com</a>
+</div></div>
+<div id="content">
+<div class="headline"> <h1 class="post-title"><a href="2025-09-18-instagram-osint.html">Instagram Private Profile Deanonymization</a></h1>
+<div class="taglist">:<a href="https://szilak.com/tag-osint.html">osint</a>:<a href="https://szilak.com/tag-instagram.html">instagram</a>:<a href="https://szilak.com/tag-privacy.html">privacy</a>:</div></div><div class="post-date"><2025-09-18></div>
+<div id="outline-container-org0f26de0" class="outline-2">
+<h2 id="org0f26de0">Summary&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org0f26de0">
+<p>
+<i>If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.</i>
+</p>
+
+<p>
+By opening <a href="https://www.instagram.com/szh4ck3r/">https://www.instagram.com/szh4ck3r/</a> (unauthenticated) the browser will make a request to <a href="https://www.instagram.com/api/v1/users/web_profile_info/?username=szh4ck3r">https://www.instagram.com/api/v1/users/web_profile_info/?username=szh4ck3r</a> (old instagram API) which would list the user's <b>collaboration posts with public profiles</b>.
+</p>
+
+
+<figure id="org1552c75">
+<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.24.11.png" alt="Screenshot 2025-04-21 at 17.24.11.png">
+
+</figure>
+
+
+<figure id="org94efa37">
+<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.53.59.png" alt="Screenshot 2025-04-21 at 17.53.59.png">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org80b4b79" class="outline-2">
+<h2 id="org80b4b79">AuthN-ed but not following&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org80b4b79">
+<p>
+GQL api get feed:
+<img src="posts/data/51/2149EC-5B7E-4C82-9DA8-046428E7BD6A/Screenshot 2025-05-21 at 18.40.22.png" alt="Screenshot 2025-05-21 at 18.40.22.png">
+</p>
+<ul class="org-ul">
+<li>Literally nothing lmao</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4309a61" class="outline-2">
+<h2 id="org4309a61">AuthN-ed and following&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org4309a61">
+
+<figure id="org049dc91">
+<img src="posts/data/A4/66BE30-0ABE-4756-ACC6-388005F66DE9/Screenshot 2025-05-21 at 18.44.46.png" alt="Screenshot 2025-05-21 at 18.44.46.png">
+
+</figure>
+<ul class="org-ul">
+<li>Obv. listed</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3872d3c" class="outline-2">
+<h2 id="org3872d3c">AuthN-ed history of reqs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org3872d3c">
+
+<figure id="org0cd49e3">
+<img src="posts/data/6F/D78490-A2D3-49B6-AA4C-465A0C28E52D/Screenshot 2025-05-21 at 18.45.53.png" alt="Screenshot 2025-05-21 at 18.45.53.png">
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-orgba1388b" class="outline-2">
+<h2 id="orgba1388b">UnauthN-ed&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-orgba1388b">
+
+<figure id="orgc96d29e">
+<img src="posts/data/75/AD6165-41D5-446B-BB04-B057449CB540/Screenshot 2025-05-21 at 18.47.48.png" alt="Screenshot 2025-05-21 at 18.47.48.png">
+
+</figure>
+<ul class="org-ul">
+<li>Ohshi w(hy)tf</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1e694e6" class="outline-2">
+<h2 id="org1e694e6">For tha Xtra lulz &#x2013; AuthN-ed direct APIreq&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org1e694e6">
+
+<figure id="org3102d36">
+<img src="posts/data/E1/5F4553-147B-4F6C-97BE-15B9EEB72C7A/Screenshot 2025-05-21 at 18.57.02.png" alt="Screenshot 2025-05-21 at 18.57.02.png">
+
+</figure>
+<ul class="org-ul">
+<li>no <code>szh4ck"</code>
+<ul class="org-ul">
+<li>aka <i>Unauth is the new auth</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org035e425" class="outline-2">
+<h2 id="org035e425">Response&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h2>
+<div class="outline-text-2" id="text-org035e425">
+
+<figure id="org8be5112">
+<img src="posts/data/75/F2C68B-ABCA-44EA-83E1-58EED578E22F/Screenshot 2025-05-20 at 20.12.13.png" alt="Screenshot 2025-05-20 at 20.12.13.png">
+
+</figure>
+<ul class="org-ul">
+<li>Haha it's just intentional behavior get fkd retard</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status"><center><a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">szilak.com</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://szilak.com" property="cc:attributionName" rel="cc:attributionURL">Mate Szilak</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center></div>
+</body>
+</html>

@@ -17,56 +17,13 @@
   <a href="https://szilak.com">szilak.com</a>
 </div></div>
 <div id="content">
-
-<div class="headline"> <h1 class="post-title"><a href="2025-04-24-instagram-osint.html">Instagram private profile deanonymization</a></h1>
-<div class="taglist">:<a href="https://szilak.com/tag-osint.html">osint</a>:</div></div><div class="post-date"><2025-04-24></div>
-<div id="outline-container-org3c5ee2f" class="outline-2">
-<h2 id="org3c5ee2f">The intended functionality :D</h2>
-<div class="outline-text-2" id="text-org3c5ee2f">
-<p>
-Since this behavior was closed as intended functionality half a year ago, I'll share it publicly to aid possible OSINT investigations / stalkers in the future :D
-</p>
-
-<p>
-Summary: <i>If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.</i>
-</p>
-
-<p>
-By opening <a href="https://www.instagram.com/szh4ck3r/">https://www.instagram.com/szh4ck3r/</a> (unauthenticated) the browser will make a request to <a href="https://www.instagram.com/api/v1/users/web_profile_info/?username=szh4ck3r">https://www.instagram.com/api/v1/users/web_profile_info/?username=szh4ck3r</a> (old instagram API) which would list the user's <b>collaboration posts with public profiles</b>.
-</p>
-
-
-<figure id="orgcfaaa19">
-<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.24.11.png" alt="Screenshot 2025-04-21 at 17.24.11.png">
-
-</figure>
-
-<p>
-<code>"coauthor_producers":[...]</code> contain coauthor usernames of a post, which could be used for further investigations.
-</p>
-
-
-<figure id="orgd9fd49e">
-<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.53.59.png" alt="Screenshot 2025-04-21 at 17.53.59.png">
-
-</figure>
-
-<p>
-Since one of the coauthors is always a public profile (by using this behavior) it's now time to get the follow{er,ing} list to expand possible connection list once again.
-</p>
-
-<p>
-To dump shared pictures of a private profile just use a simple <code>grep -o display_url":"[^"]*</code> to get all post URLs and a <code>| sed 's/\\u00/\%/g'</code> to get rid of Unicode URL encoding then download/open the clean URLs.
-</p>
-
-
-<figure id="org03d9a0f">
-<img src="posts/data/D0/EC501C-34AC-4D28-8320-E6CE0E73302D/Screenshot 2025-04-21 at 17.47.55.png" alt="Screenshot 2025-04-21 at 17.47.55.png">
-
-</figure>
-</div>
-</div>
-<div id="archive">
+<h2 class="post-title"><a href="https://szilak.com/2025-09-18-locked-iphone-arbitrary-number-call.html">Locked iPhone Arbitrary Number Call</a></h2><div class="post-date">18 Sep 2025</div><p>
+<i>Phone Numbers <b>not saved in the contact list</b> can be called from a locked iPhone (after first unlock) by using Spotlight Search.</i>
+</p>(...)<div class="taglist"><a href="https://szilak.com/tags.html">Tags</a>: <a href="https://szilak.com/tag-apple.html">apple</a> <a href="https://szilak.com/tag-iphone.html">iphone</a> <a href="https://szilak.com/tag-privacy.html">privacy</a> </div><h2 class="post-title"><a href="https://szilak.com/2025-09-18-locked-iphone-contact-brute-force.html">Locked iPhone Saved Contact Confirmation</a></h2><div class="post-date">18 Sep 2025</div><p>
+<i>It is possible to <b>confirm whether a Phone Number/Email is saved in an locked iPhone</b> (after first unlock) by using Spotlight Search.</i>
+</p>(...)<div class="taglist"><a href="https://szilak.com/tags.html">Tags</a>: <a href="https://szilak.com/tag-apple.html">apple</a> <a href="https://szilak.com/tag-iphone.html">iphone</a> <a href="https://szilak.com/tag-privacy.html">privacy</a> </div><h2 class="post-title"><a href="https://szilak.com/2025-09-18-instagram-osint.html">Instagram Private Profile Deanonymization</a></h2><div class="post-date">18 Sep 2025</div><p>
+<i>If a private profile has a collaboration post with a public profile it is possible to access the post and the collaborators without authentication, only by knowing the private profile's username, thus expand the possible connections to the target of the investigation.</i>
+</p>(...)<div class="taglist"><a href="https://szilak.com/tags.html">Tags</a>: <a href="https://szilak.com/tag-osint.html">osint</a> <a href="https://szilak.com/tag-instagram.html">instagram</a> <a href="https://szilak.com/tag-privacy.html">privacy</a> </div><div id="archive">
 <a href="https://szilak.com/archive.html">Other posts</a>
 </div>
 </div>

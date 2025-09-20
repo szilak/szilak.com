@@ -1,0 +1,17 @@
+#+title: Locked iPhone Arbitrary Number Call
+#+date: <2025-09-18 13:17>
+#+description: Phone Numbers **not saved in the contact list** could be called by using Spotlight Search without unlocking the device.
+#+filetags: apple iphone privacy
+
+* Summary
+/Phone Numbers **not saved in the contact list** could be called by using Spotlight Search without unlocking the device./
+
+* Prerequisites
+A locked iPhone with default configuration after first unlock or locked iPhone with default configuration in Lockdown Mode after first unlock.
+
+* Steps to Reproduce
+1. Use Spotlight Search to search for a Phone Number (with proper country codes e.g., +36 for Hungary).
+2. Tap on the number label (not the phone icon -- note: sometimes it works with the phone icon itself but it was indeterministic while testing) to call arbitrary phone numbers that are **not saved in the contact list**.
+
+
+
